@@ -24,6 +24,9 @@ class Job(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=200)
 
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     def __str__(self):
         return self.name
     
@@ -33,6 +36,9 @@ class Company(models.Model):
     description = models.TextField(null=False, blank=False)
     website = models.URLField(null=False, blank=False)
     # logo = models.ImageField(upload_to='company_logos/', null=False, blank=False)
+
+    class Meta:
+        verbose_name_plural = 'Companies'
 
     def __str__(self):
         return self.name
